@@ -97,8 +97,8 @@ git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
 mkdir build
 cd build
-cmake ..
-cmake --build .
+cmake .. -DPYBIND11_PYTHON_VERSION=3.9 -DBUILD_PANGOLIN_LIBREALSENSE=OFF
+make -j8
 ```
 
 If you would like to build the documentation and you have Doxygen installed, you
