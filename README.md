@@ -1,6 +1,8 @@
 What is Pangolin
 ====================================
 
+[Fork from https://github.com/stevenlovegrove/Pangolin updated with the python bindings from https://github.com/uoip/pangolin.git ]
+
 Pangolin is a lightweight portable rapid development library for managing OpenGL
 display / interaction and abstracting video input. At its heart is a simple
 OpenGl viewport manager which can help to modularise 3D visualisation without

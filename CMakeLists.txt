@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.12)
 project("Pangolin")
 set(PANGOLIN_VERSION_MAJOR 0)
-set(PANGOLIN_VERSION_MINOR 6)
+set(PANGOLIN_VERSION_MINOR 5)
 set(PANGOLIN_VERSION ${PANGOLIN_VERSION_MAJOR}.${PANGOLIN_VERSION_MINOR})
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/")
@@ -78,7 +78,8 @@ if( NOT CMAKE_BUILD_TYPE AND NOT _WIN_ )
    set( CMAKE_BUILD_TYPE Release )
 endif()
 
-string(TOLOWER ${PROJECT_NAME} LIBRARY_NAME)
+#string(TOLOWER _${PROJECT_NAME} LIBRARY_NAME)    # modified for python binding (add "_" to avoid naming conflict with python library "pangolin")
+string(TOLOWER ${PROJECT_NAME} LIBRARY_NAME)    
 
 # make an uninstall target
 configure_file(
@@ -92,6 +93,7 @@ add_custom_target(pangolin_uninstall
 
 add_subdirectory("external")
 add_subdirectory("src")
+add_subdirectory("python") 
 
 if(BUILD_TESTS)
     set(Pangolin_DIR ${Pangolin_BINARY_DIR}/src)
@@ -107,3 +109,4 @@ if(BUILD_EXAMPLES)
     set(Pangolin_DIR ${Pangolin_BINARY_DIR}/src)
     add_subdirectory(examples)
 endif()
+

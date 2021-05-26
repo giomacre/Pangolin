@@ -288,7 +288,7 @@ if(UNIX)
   endif()
 endif()
 
-option(BUILD_PANGOLIN_PYTHON "Build support for Pangolin Interactive Console" ON)
+option(BUILD_PANGOLIN_PYTHON "Build support for Pangolin Interactive Console" OFF)
 if(BUILD_PANGOLIN_PYTHON AND BUILD_PANGOLIN_GUI AND BUILD_PANGOLIN_VARS AND NOT _WIN_)
   if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../external/pybind11/CMakeLists.txt")
       add_subdirectory("../external/pybind11" "${CMAKE_CURRENT_BINARY_DIR}/external/pybind11")
