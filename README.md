@@ -93,7 +93,7 @@ Pangolin uses the CMake portable pre-build tool. To checkout and build pangolin 
 directory 'build', execute the following at a shell (or the equivelent using a GUI):
 
 ```
-git clone https://github.com/stevenlovegrove/Pangolin.git
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
 mkdir build
 cd build
