@@ -172,6 +172,9 @@ void declareOpenGlRenderState(py::module & m) {
     m.def("ProjectionMatrixRDF_TopLeft", &ProjectionMatrixRDF_TopLeft,
         "w"_a, "h"_a, "fu"_a, "fv"_a, "u0"_a, "v0"_a, "zNear"_a, "zFar"_a);
 
+    m.def("ProjectionMatrixRDF_BottomLeft", &ProjectionMatrixRDF_BottomLeft,
+        "w"_a, "h"_a, "fu"_a, "fv"_a, "u0"_a, "v0"_a, "zNear"_a, "zFar"_a);
+
     m.def("ModelViewLookAtRUB", &ModelViewLookAtRUB,
         "ex"_a, "ey"_a, "ez"_a, "lx"_a, "ly"_a, "lz"_a, "ux"_a, "uy"_a, "uz"_a);
          

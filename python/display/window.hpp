@@ -13,7 +13,9 @@ namespace pangolin {
 void declareWindow(py::module & m) {
 
     py::class_<GlContextInterface, std::shared_ptr<GlContextInterface>>(m, "GlContextInterface");
-    py::class_<WindowInterface, std::shared_ptr<WindowInterface>>(m, "WindowInterface");
+    py::class_<WindowInterface, std::shared_ptr<WindowInterface>>(m, "WindowInterface")
+        .def("MakeCurrent", &pangolin::WindowInterface::MakeCurrent)
+        .def("RemoveCurrent", &pangolin::WindowInterface::RemoveCurrent);
 
 }
 
